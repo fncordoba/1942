@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>1942 Game</title>
+	<script src="framework.js" type="application/javascript"></script>
+	<script src="teclado.js" type="application/javascript"></script>
+	<script src="mouse.js" type="application/javascript"></script>
+	<script src="avion.js" type="application/javascript"></script>
+	<script src="enemigo.js" type="application/javascript"></script>
+	<script src="bala.js" type="application/javascript"></script>
+</head>
+
+<body>
+
+	<canvas id="miCanvas" width="640" height="480"></canvas>
+	
+	<div>
+		Velocidad de Movimiento x: 
+		<input type="text" id="velmovx" />
+	</div>
+
+	
+
+</body>
+
+<script type="application/javascript">
+
+	let spriteSheet= new Image();
+
+
+		spriteSheet.onload= function () {
+			framework.objetosDeJuego.push(avion);
+			//framework.objetosDeJuego.push(enemigo);
+			framework.iniciar();
+			mouse.iniciar();
+			teclado.iniciar();
+		};
+
+		spriteSheet.src="imagen/1942.png";
+
+	</script>
+
+</html>
